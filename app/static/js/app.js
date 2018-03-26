@@ -59,7 +59,7 @@ const NewsList=Vue.component('news-list',{
     </div>`,
         created: function() {
             let self =this;
-            fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=f68b270c1ed747c6bdcc27abeb8e8fa3')
+            fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=')
             .then(function(response) {
                 return response.json();
             })
@@ -119,7 +119,7 @@ const router = new VueRouter({
     ]
 });
 
-let app = new Vue({
+const app = new Vue({
     el: '#app',
     router
 });
